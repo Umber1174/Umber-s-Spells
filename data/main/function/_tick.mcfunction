@@ -42,7 +42,7 @@
                 
                 # タグ(have.wand)のあるプレイヤーのアクションバーにテキスト(スコア(SSS): スコア(SS_ [1~5]))を表示
                     execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "1: "}, {"score": {"name": "@s", "objective": "SS_1"}}]
-                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "2: "}, {"score": {"name": "@s", "objective": "SS_2"}}]
-                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "3: "}, {"score": {"name": "@s", "objective": "SS_3"}}]
-                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "4: "}, {"score": {"name": "@s", "objective": "SS_4"}}]
-                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "5: "}, {"score": {"name": "@s", "objective": "SS_5"}}]
+                    execute as @a[tag=have.wand, scores={SSS=2}] run title @s actionbar [{"text": "2: "}, {"score": {"name": "@s", "objective": "SS_2"}}]
+                    execute as @a[tag=have.wand, scores={SSS=3}] run title @s actionbar [{"text": "3: "}, {"score": {"name": "@s", "objective": "SS_3"}}]
+                    execute as @a[tag=have.wand, scores={SSS=4}] run title @s actionbar [{"text": "4: "}, {"score": {"name": "@s", "objective": "SS_4"}}]
+                    execute as @a[tag=have.wand, scores={SSS=5}] run title @s actionbar [{"text": "5: "}, {"score": {"name": "@s", "objective": "SS_5"}}]
