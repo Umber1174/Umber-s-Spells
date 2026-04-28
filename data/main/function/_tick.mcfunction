@@ -41,8 +41,8 @@
                     execute as @a[tag=have.wand] unless items entity @s weapon.* music_disc_11[custom_data={"text": "Wand"}] run tag @s remove have.wand
                 
                 # タグ(have.wand)のあるプレイヤーのアクションバーにテキスト(スコア(SSS): スコア(SS_ [1~5]))を表示
-                    title @a[tag=have.wand, scores={SSS=1}] actionbar [{"text": "1: "}, {"score": {"name": "@s", "objective": "SS_1"}}]
-                    title @a[tag=have.wand, scores={SSS=2}] actionbar [{"text": "2: "}, {"score": {"name": "@s", "objective": "SS_2"}}]
-                    title @a[tag=have.wand, scores={SSS=3}] actionbar [{"text": "3: "}, {"score": {"name": "@s", "objective": "SS_3"}}]
-                    title @a[tag=have.wand, scores={SSS=4}] actionbar [{"text": "4: "}, {"score": {"name": "@s", "objective": "SS_4"}}]
-                    title @a[tag=have.wand, scores={SSS=5}] actionbar [{"text": "5: "}, {"score": {"name": "@s", "objective": "SS_5"}}]
+                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "1: "}, {"score": {"name": "@s", "objective": "SS_1"}}]
+                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "2: "}, {"score": {"name": "@s", "objective": "SS_2"}}]
+                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "3: "}, {"score": {"name": "@s", "objective": "SS_3"}}]
+                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "4: "}, {"score": {"name": "@s", "objective": "SS_4"}}]
+                    execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "5: "}, {"score": {"name": "@s", "objective": "SS_5"}}]
