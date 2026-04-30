@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "clicked": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": "music_disc_11",
+                    "components": {
+                        "custom_data": {"text": "Wand"}
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "main:clicked"
+    }
+}
