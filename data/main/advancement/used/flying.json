@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "used.flying": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": "music_disc_11",
+                    "components": {
+                        "custom_data": {"text": "Scroll.Flying"}
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "main:used/flying"
+    }
+}

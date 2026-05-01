@@ -45,3 +45,7 @@
                 execute as @a run title @s[tag=have.wand, scores={SSS=3}] actionbar [{"text": "3: "}, {"score": {"name": "@s", "objective": "SS_3"}}]
                 execute as @a run title @s[tag=have.wand, scores={SSS=4}] actionbar [{"text": "4: "}, {"score": {"name": "@s", "objective": "SS_4"}}]
                 execute as @a run title @s[tag=have.wand, scores={SSS=5}] actionbar [{"text": "5: "}, {"score": {"name": "@s", "objective": "SS_5"}}]
+    
+    # アイテム(Scroll)
+        # ファイル(s)を実行
+            function main:text/s
