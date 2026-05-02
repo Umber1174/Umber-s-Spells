@@ -49,3 +49,19 @@
     # アイテム(Scroll)
         # ファイル(s)を実行
             function main:text/s
+    
+    # アイテム(Grimoire)
+        # タグ(got.grimoire)のあるプレイヤーがホットバー/オフハンドにアイテム(Grimoire)を所持しているとき、アイテム(Grimoire)を更新
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.0 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.0 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.1 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.1 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.2 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.2 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.3 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.3 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.4 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.4 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.5 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.5 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.6 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.6 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.7 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.7 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.8 written_book[custom_data={"text": "Grimoire"}] run item replace entity @s hotbar.8 with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            execute as @a[tag=got.grimoire] if items entity @s weapon.offhand written_book[custom_data={"text": "Grimoire"}] run item replace entity @s weapon.offhand with written_book[max_stack_size=1, custom_data={"text": "Grimoire"}] 1
+            
+            execute as @a[tag=got.grimoire] if items entity @s hotbar.* written_book[custom_data={"text": "Grimoire"}] run tag @s remove got.grimoire
+            execute as @a[tag=got.grimoire] if items entity @s weapon.offhand written_book[custom_data={"text": "Grimoire"}] run tag @s remove got.grimoire

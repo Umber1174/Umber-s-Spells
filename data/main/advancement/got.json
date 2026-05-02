@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "got": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [{
+                    "items": "written_book",
+                    "components": {
+                        "custom_data": {"text": "Grimoire"}
+                    }
+                }]
+            }
+        }
+    },
+    "rewards": {
+        "function": "main:got"
+    }
+}

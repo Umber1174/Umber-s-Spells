@@ -10,3 +10,6 @@
     # スコア(S.Flying [/.desc])の値を1に設定
         scoreboard players set @s S.Flying 1
         scoreboard players set @s S.Flying.desc 1
+    
+    # タグ(got.grimoire)を付与
+        tag @s add got.grimoire
