@@ -44,14 +44,16 @@
     
     # アイテム(Scroll)
         # Flying
-            # スコア(S.Flying [/.desc/.trgg])を追加
+            # スコア(S.Flying [/.desc/.swch/.trgg])を追加
                 scoreboard objectives add S.Flying dummy
                 scoreboard objectives add S.Flying.desc dummy
+                scoreboard objectives add S.Flying.swch dummy
                 scoreboard objectives add S.Flying.trgg trigger
             
-            # スコア(S.Flying [/.desc/.trgg])の値を0に設定
+            # スコア(S.Flying [/.desc/.swch/.trgg])の値を0に設定
                 scoreboard players set @a[tag=!logged-in] S.Flying 0
                 scoreboard players set @a[tag=!logged-in] S.Flying.desc 0
+                scoreboard players set @a[tag=!logged-in] S.Flying.swch 0
                 scoreboard players set @a[tag=!logged-in] S.Flying.trgg 0
     
     # タグ(logged-in)を付与
