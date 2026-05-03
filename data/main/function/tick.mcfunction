@@ -1,4 +1,4 @@
-## main:_tick
+## main:tick
 # 持続処理
 
 # 処理
@@ -40,14 +40,14 @@
                 execute as @a[tag=have.wand] unless items entity @s weapon.* music_disc_11[custom_data={"text": "Wand"}] run tag @s remove have.wand
             
             # タグ(have.wand)のあるプレイヤーのアクションバーにテキスト(スコア(SSS): スコア(SS_ [1/../5]))を表示
-                execute as @a run title @s[tag=have.wand, scores={SSS=1}] actionbar [{"text": "1: "}, {"score": {"name": "@s", "objective": "SS_1"}}]
-                execute as @a run title @s[tag=have.wand, scores={SSS=2}] actionbar [{"text": "2: "}, {"score": {"name": "@s", "objective": "SS_2"}}]
-                execute as @a run title @s[tag=have.wand, scores={SSS=3}] actionbar [{"text": "3: "}, {"score": {"name": "@s", "objective": "SS_3"}}]
-                execute as @a run title @s[tag=have.wand, scores={SSS=4}] actionbar [{"text": "4: "}, {"score": {"name": "@s", "objective": "SS_4"}}]
-                execute as @a run title @s[tag=have.wand, scores={SSS=5}] actionbar [{"text": "5: "}, {"score": {"name": "@s", "objective": "SS_5"}}]
+                execute as @a[tag=have.wand, scores={SSS=1}] run title @s actionbar [{"text": "1: "}, {"score": {"name": "@s", "objective": "SS_1"}}]
+                execute as @a[tag=have.wand, scores={SSS=2}] run title @s actionbar [{"text": "2: "}, {"score": {"name": "@s", "objective": "SS_2"}}]
+                execute as @a[tag=have.wand, scores={SSS=3}] run title @s actionbar [{"text": "3: "}, {"score": {"name": "@s", "objective": "SS_3"}}]
+                execute as @a[tag=have.wand, scores={SSS=4}] run title @s actionbar [{"text": "4: "}, {"score": {"name": "@s", "objective": "SS_4"}}]
+                execute as @a[tag=have.wand, scores={SSS=5}] run title @s actionbar [{"text": "5: "}, {"score": {"name": "@s", "objective": "SS_5"}}]
         
         # 発動
-            # flying
+            # 空を飛ぶ魔法
                 scoreboard players set @a[scores={O-RCF=1, SSS=1, SS_1=1, S.Flying.swch=0}] S.Flying.swch 1
                 scoreboard players set @a[scores={O-RCF=1, SSS=1, SS_1=1, S.Flying.swch=1}] S.Flying.swch 0
     
@@ -74,13 +74,13 @@
         # スコア(S.)
             # Flying.trgg
                 # クリック後の処理
-                        execute as @a if entity @s[scores={S.Flying=0, S.Flying.trgg=1}] run tellraw @s [{"text": "この魔法はまだ覚えていません。", "color": "red"}]
-                        execute as @a if entity @s[scores={S.Flying=1, S.Flying.trgg=1}] unless items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run tellraw @s [{"text": "オフハンドに杖を所持してください。", "color": "red"}]
-                        execute as @a if entity @s[scores={S.Flying=1, S.Flying.trgg=1, SSS=1}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_1 1
-                        execute as @a if entity @s[scores={S.Flying=1, S.Flying.trgg=1, SSS=2}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_2 1
-                        execute as @a if entity @s[scores={S.Flying=1, S.Flying.trgg=1, SSS=3}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_3 1
-                        execute as @a if entity @s[scores={S.Flying=1, S.Flying.trgg=1, SSS=4}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_4 1
-                        execute as @a if entity @s[scores={S.Flying=1, S.Flying.trgg=1, SSS=5}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_5 1
+                        execute as @a[scores={S.Flying=0, S.Flying.trgg=1}] run tellraw @s [{"text": "この魔法はまだ覚えていません。", "color": "red"}]
+                        execute as @a[scores={S.Flying=1, S.Flying.trgg=1}] unless items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run tellraw @s [{"text": "オフハンドに杖を所持してください。", "color": "red"}]
+                        execute as @a[scores={S.Flying=1, S.Flying.trgg=1, SSS=1}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_1 1
+                        execute as @a[scores={S.Flying=1, S.Flying.trgg=1, SSS=2}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_2 1
+                        execute as @a[scores={S.Flying=1, S.Flying.trgg=1, SSS=3}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_3 1
+                        execute as @a[scores={S.Flying=1, S.Flying.trgg=1, SSS=4}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_4 1
+                        execute as @a[scores={S.Flying=1, S.Flying.trgg=1, SSS=5}] if items entity @s weapon.offhand music_disc_11[custom_data={"text": "Wand"}] run scoreboard players set @s SS_5 1
                 
                 # 有効化 & 初期化
                     scoreboard players enable @a S.Flying.trgg

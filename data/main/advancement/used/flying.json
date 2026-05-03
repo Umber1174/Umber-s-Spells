@@ -13,6 +13,6 @@
         }
     },
     "rewards": {
-        "function": "main:used/flying"
+        "function": "main:advancement/used/flying"
     }
 }

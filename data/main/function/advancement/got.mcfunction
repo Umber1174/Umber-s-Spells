@@ -1,4 +1,4 @@
-## main:got
+## main:advancement/got
 # 進捗(got)達成後の処理
 
 # 処理

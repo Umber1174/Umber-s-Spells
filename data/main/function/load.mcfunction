@@ -1,4 +1,4 @@
-## main:_load
+## main:load
 # 起動処理
 
 # 処理
@@ -43,7 +43,7 @@
                 scoreboard players set @a[tag=!logged-in] SS_5 0
     
     # アイテム(Scroll)
-        # Flying
+        # 空を飛ぶ魔法
             # スコア(S.Flying [/.desc/.swch/.trgg])を追加
                 scoreboard objectives add S.Flying dummy
                 scoreboard objectives add S.Flying.desc dummy
