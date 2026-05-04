@@ -13,6 +13,6 @@
         }
     },
     "rewards": {
-        "function": "main:advancement/used/flying"
+        "function": "main:spell/advancement/used/flying"
     }
 }

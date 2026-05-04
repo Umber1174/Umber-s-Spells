@@ -1,4 +1,4 @@
-## main:advancement/clicked
+## main:spell/advancement/clicked
 # 進捗(clicked)達成後の処理
 
 # 処理

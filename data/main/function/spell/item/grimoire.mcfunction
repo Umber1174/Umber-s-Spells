@@ -1,4 +1,4 @@
-## main:item/grimoire
+## main:spell/item/grimoire
 # アイテム(Grimoire)
 
 # 処理

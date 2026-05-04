@@ -1,4 +1,4 @@
-## main:advancement/got
+## main:spell/advancement/got
 # 進捗(got)達成後の処理
 
 # 処理

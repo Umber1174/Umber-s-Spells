@@ -1,4 +1,4 @@
-## main:item/wand
+## main:spell/item/wand
 # アイテム(Wand)
 
 # 処理

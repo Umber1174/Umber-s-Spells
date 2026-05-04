@@ -1,4 +1,4 @@
-## main:item/scroll/flying
+## main:spell/item/scroll/flying
 # アイテム(Scroll.Flying)
 
 # 処理

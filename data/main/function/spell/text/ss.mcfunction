@@ -1,4 +1,4 @@
-## main:text/ss
+## main:spell/text/ss
 # スコア(SS_ [1/../5])の値に表示するテキストの設定
 
 # 処理

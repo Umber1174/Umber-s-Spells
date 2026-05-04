@@ -1,4 +1,4 @@
-## main:advancement/used/flying
+## main:spell/advancement/used/flying
 # 進捗(used.flying)達成後の処理
 
 # 処理

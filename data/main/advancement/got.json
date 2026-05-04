@@ -13,6 +13,6 @@
         }
     },
     "rewards": {
-        "function": "main:advancement/got"
+        "function": "main:spell/advancement/got"
     }
 }
