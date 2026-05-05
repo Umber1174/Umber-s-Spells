@@ -5,8 +5,26 @@
     # アイテム(Wand)
         # 発動
             # 空を飛ぶ魔法
-                scoreboard players set @a[scores={O-RCF=1, SSS=1, SS_1=1, S.Flying.swch=0}] S.Flying.swch 1
-                scoreboard players set @a[scores={O-RCF=1, SSS=1, SS_1=1, S.Flying.swch=1}] S.Flying.swch 0
+                # ファイル(flying)を実行
+                    execute as @a[scores={S.Flying.swch=1}] run function main:spell/spells/flying/flying
+                
+                # 切り替え処理
+                    # OFF -> ON
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=1, SS_1=1, S.Flying.swch=0}] run function main:spell/spells/flying/changed/on
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=2, SS_2=1, S.Flying.swch=0}] run function main:spell/spells/flying/changed/on
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=3, SS_3=1, S.Flying.swch=0}] run function main:spell/spells/flying/changed/on
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=4, SS_4=1, S.Flying.swch=0}] run function main:spell/spells/flying/changed/on
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=5, SS_5=1, S.Flying.swch=0}] run function main:spell/spells/flying/changed/on
+                    
+                    # ON -> OFF
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=1, SS_1=1, S.Flying.swch=1}] run function main:spell/spells/flying/changed/off
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=2, SS_2=1, S.Flying.swch=1}] run function main:spell/spells/flying/changed/off
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=3, SS_3=1, S.Flying.swch=1}] run function main:spell/spells/flying/changed/off
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=4, SS_4=1, S.Flying.swch=1}] run function main:spell/spells/flying/changed/off
+                        execute as @a[tag=!s.flying.changed, scores={O-RCF=1, SSS=5, SS_5=1, S.Flying.swch=1}] run function main:spell/spells/flying/changed/off
+                    
+                    # 初期化
+                        execute as @a[tag=s.flying.changed, scores={O-RCF=0}] run tag @s remove s.flying.changed
     
     # アイテム(Grimoire)
         # スコア(S.Flying.trgg)

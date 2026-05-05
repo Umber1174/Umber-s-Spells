@@ -11,5 +11,5 @@
         scoreboard players set @s S.Flying 1
         scoreboard players set @s S.Flying.desc 1
     
-    # タグ(got.grimoire)を付与
-        tag @s add got.grimoire
+    # タグ(update.grimoire)を付与
+        tag @s add update.grimoire
