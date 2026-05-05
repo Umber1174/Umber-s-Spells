@@ -2,8 +2,8 @@
 # 切り替え処理(ON)
 
 # 処理
-    # タグ(s.flying.changed)を付与
-        tag @s add s.flying.changed
+    # タグ(changed.flying)を付与
+        tag @s add changed.flying
     
     # スコア(S.Flying.swch)の値を1に設定
         scoreboard players set @s S.Flying.swch 1

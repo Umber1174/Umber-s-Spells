@@ -5,5 +5,5 @@
     # 進捗(got)を剥奪
         advancement revoke @s only main:got
     
-    # タグ(update.grimoire)を付与
-        tag @s add update.grimoire
+    # タグ(update.Grimoire)を付与
+        tag @s add update.Grimoire

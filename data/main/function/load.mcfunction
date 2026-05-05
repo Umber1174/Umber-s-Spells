@@ -3,28 +3,25 @@
 
 # 処理
     # 読み込み通知
-        # タグ(logged-in)のないプレイヤー
-            tellraw @a[tag=!logged-in] [{"text": "[Umber's Spells]", "color": "gold"}, {"text": "が読み込まれました。", "color": "green"}]
+        # タグ(LoggedIn)のないプレイヤー
+            tellraw @a[tag=!LoggedIn] [{"text": "[Umber's Spells]", "color": "gold"}, {"text": "が読み込まれました。", "color": "green"}]
         
-        # タグ(logged-in)のあるプレイヤー
-            tellraw @a[tag=logged-in] [{"text": "[Umber's Spells]", "color": "gold"}, {"text": "が読み込まれました。", "color": "green"}]
-    
-    # コマンドの実行結果を非表示
-        gamerule send_command_feedback false
+        # タグ(LoggedIn)のあるプレイヤー
+            tellraw @a[tag=LoggedIn] [{"text": "[Umber's Spells]", "color": "gold"}, {"text": "が読み込まれました。", "color": "green"}]
     
     # アイテム(Wand)
         # 右クリック
-            # スコア([M/O] -RC [F/L])を追加
-                scoreboard objectives add M-RCF dummy
-                scoreboard objectives add M-RCL dummy
-                scoreboard objectives add O-RCF dummy
-                scoreboard objectives add O-RCL dummy
+            # スコア(RC. [M/O] [F/L])を追加
+                scoreboard objectives add RC.MF dummy
+                scoreboard objectives add RC.ML dummy
+                scoreboard objectives add RC.OF dummy
+                scoreboard objectives add RC.OL dummy
             
-            # スコア([M/O] -RC [F/L])の値を0に設定
-                scoreboard players set @a[tag=!logged-in] M-RCF 0
-                scoreboard players set @a[tag=!logged-in] M-RCL 0
-                scoreboard players set @a[tag=!logged-in] O-RCF 0
-                scoreboard players set @a[tag=!logged-in] O-RCL 0
+            # スコア(RC. [M/O] [F/L])の値を0に設定
+                scoreboard players set @a[tag=!LoggedIn] RC.MF 0
+                scoreboard players set @a[tag=!LoggedIn] RC.ML 0
+                scoreboard players set @a[tag=!LoggedIn] RC.OF 0
+                scoreboard players set @a[tag=!LoggedIn] RC.OL 0
         
         # スペルスロット
             # スコア(SSS, SS_ [1/../5])を追加
@@ -36,18 +33,21 @@
                 scoreboard objectives add SS_5 dummy
             
             # スコア(SSS)の値を1に設定
-                scoreboard players set @a[tag=!logged-in] SSS 1
+                scoreboard players set @a[tag=!LoggedIn] SSS 1
             
             # スコア(SS_ [1/../5])の値を0に設定
-                scoreboard players set @a[tag=!logged-in] SS_1 0
-                scoreboard players set @a[tag=!logged-in] SS_2 0
-                scoreboard players set @a[tag=!logged-in] SS_3 0
-                scoreboard players set @a[tag=!logged-in] SS_4 0
-                scoreboard players set @a[tag=!logged-in] SS_5 0
+                scoreboard players set @a[tag=!LoggedIn] SS_1 0
+                scoreboard players set @a[tag=!LoggedIn] SS_2 0
+                scoreboard players set @a[tag=!LoggedIn] SS_3 0
+                scoreboard players set @a[tag=!LoggedIn] SS_4 0
+                scoreboard players set @a[tag=!LoggedIn] SS_5 0
     
     # アイテム(Scroll)
         # ファイル(main:spell/load)を実行
             function main:spell/load
     
-    # タグ(logged-in)を付与
-        tag @a[tag=!logged-in] add logged-in
+    # コマンドの実行結果を非表示
+        gamerule send_command_feedback false
+    
+    # タグ(LoggedIn)を付与
+        tag @a[tag=!LoggedIn] add LoggedIn

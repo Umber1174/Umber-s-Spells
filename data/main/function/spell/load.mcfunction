@@ -11,8 +11,8 @@
             scoreboard objectives add S.Flying.time dummy
         
         # スコア(S.Flying [/.desc/.trgg/.swch/.time])の値を0に設定
-            scoreboard players set @a[tag=!logged-in] S.Flying 0
-            scoreboard players set @a[tag=!logged-in] S.Flying.desc 0
-            scoreboard players set @a[tag=!logged-in] S.Flying.trgg 0
-            scoreboard players set @a[tag=!logged-in] S.Flying.swch 0
-            scoreboard players set @a[tag=!logged-in] S.Flying.time 0
+            scoreboard players set @a[tag=!LoggedIn] S.Flying 0
+            scoreboard players set @a[tag=!LoggedIn] S.Flying.desc 0
+            scoreboard players set @a[tag=!LoggedIn] S.Flying.trgg 0
+            scoreboard players set @a[tag=!LoggedIn] S.Flying.swch 0
+            scoreboard players set @a[tag=!LoggedIn] S.Flying.time 0
