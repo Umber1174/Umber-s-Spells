@@ -41,6 +41,12 @@
                 scoreboard players set @a[tag=!LoggedIn] SS_3 0
                 scoreboard players set @a[tag=!LoggedIn] SS_4 0
                 scoreboard players set @a[tag=!LoggedIn] SS_5 0
+        
+        # スコア(DC)を追加
+            scoreboard objectives add DC deathCount
+        
+        # スコア(DC)の値を0に設定
+            scoreboard players set @a[tag=!LoggedIn] DC 0
     
     # アイテム(Scroll)
         # ファイル(main:spell/load)を実行

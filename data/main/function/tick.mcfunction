@@ -6,6 +6,9 @@
         function main:spell/tick
     
     # アイテム(Wand)
+        # スコア(DC)の値が1以上のプレイヤーにファイル(dc)を実行
+            execute as @a[scores={DC=1..}] run function main:spell/dc
+        
         # 右クリック
             # メインハンド
                 # スコア(RC.MF)の値が0のプレイヤーのスコア(RC.ML)の値を0に設定
