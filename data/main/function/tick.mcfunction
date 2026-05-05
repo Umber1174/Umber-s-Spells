@@ -8,20 +8,20 @@
     # アイテム(Wand)
         # 右クリック
             # メインハンド
-                # スコア(M-RCF)の値が0のとき、スコア(M-RCL)の値を0に設定
+                # スコア(M-RCF)の値が0のプレイヤーのスコア(M-RCL)の値を0に設定
                     scoreboard players set @a[scores={M-RCF=0}] M-RCL 0
                 
-                # スコア(M-RCF)の値が1以上のとき、スコア(M-RCL)の値を1追加
+                # スコア(M-RCF)の値が1以上のプレイヤーのスコア(M-RCL)の値を1追加
                     scoreboard players add @a[scores={M-RCF=1..}] M-RCL 1
                 
                 # スコア(M-RCF)の値がスコア(M-RCL)の値より小さいとき、スコア(M-RCF)の値を0に設定
                     execute as @a if score @s M-RCF < @s M-RCL run scoreboard players set @s M-RCF 0
             
             # オフハンド
-                # スコア(O-RCF)の値が0のとき、スコア(O-RCL)の値を0に設定
+                # スコア(O-RCF)の値が0のプレイヤーのスコア(O-RCL)の値を0に設定
                     scoreboard players set @a[scores={O-RCF=0}] O-RCL 0
                 
-                # スコア(O-RCF)の値が1以上のとき、スコア(O-RCL)の値を1追加
+                # スコア(O-RCF)の値が1以上のプレイヤーのスコア(O-RCL)の値を1追加
                     scoreboard players add @a[scores={O-RCF=1..}] O-RCL 1
                 
                 # スコア(O-RCF)の値がスコア(O-RCL)の値より小さいとき、スコア(O-RCF)の値を0に設定
@@ -70,17 +70,17 @@
             execute as @a[tag=update.grimoire] if items entity @s weapon.offhand written_book[custom_data={"text": "Grimoire"}] run tag @s remove update.grimoire
     
     # プレイヤーの状態
-        # 通常状態
+        # 通常状態のとき、タグ(sneaking, swimming)を剥奪 & タグ(standing)を付与
             execute as @a at @s positioned ~ ~1.5 ~ if entity @s[dy=0] run tag @s remove sneaking
             execute as @a at @s positioned ~ ~1.5 ~ if entity @s[dy=0] run tag @s remove swimming
             execute as @a at @s positioned ~ ~1.5 ~ if entity @s[dy=0] run tag @s add standing
         
-        # スニーク状態
+        # スニーク状態のとき、タグ(standing, swimming)を剥奪 & タグ(sneaking)を付与
             execute as @a at @s positioned ~ ~1.5 ~ unless entity @s[dy=0] at @s positioned ~ ~1 ~ if entity @s[dy=0] run tag @s remove standing
             execute as @a at @s positioned ~ ~1.5 ~ unless entity @s[dy=0] at @s positioned ~ ~1 ~ if entity @s[dy=0] run tag @s remove swimming
             execute as @a at @s positioned ~ ~1.5 ~ unless entity @s[dy=0] at @s positioned ~ ~1 ~ if entity @s[dy=0] run tag @s add sneaking
         
-        # 水泳状態
+        # 水泳状態のとき、タグ(standing, sneaking)を剥奪 & タグ(swimming)を付与
             execute as @a at @s positioned ~ ~1 ~ unless entity @s[dy=0] run tag @s remove standing
             execute as @a at @s positioned ~ ~1 ~ unless entity @s[dy=0] run tag @s remove sneaking
             execute as @a at @s positioned ~ ~1 ~ unless entity @s[dy=0] run tag @s add swimming
