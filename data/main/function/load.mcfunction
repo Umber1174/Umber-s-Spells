@@ -9,6 +9,9 @@
         # タグ(logged-in)のあるプレイヤー
             tellraw @a[tag=logged-in] [{"text": "[Umber's Spells]", "color": "gold"}, {"text": "が読み込まれました。", "color": "green"}]
     
+    # コマンドの実行結果を非表示
+        gamerule send_command_feedback false
+    
     # アイテム(Wand)
         # 右クリック
             # スコア([M/O] -RC [F/L])を追加
