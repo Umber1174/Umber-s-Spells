@@ -31,7 +31,7 @@
             # ファイル(ss)を実行
                 function main:spell/text/ss
             
-            # スコア(RC.MF)の値が1のプレイヤーのスコア(SSS)の値を1追加
+            # スコア(RC.MF)の値が1のプレイヤーのスコア(SSS)の値を1追加(1..5)
                 scoreboard players add @a[scores={RC.MF=1}] SSS 1
                 scoreboard players set @a[scores={SSS=6..}] SSS 1
             
